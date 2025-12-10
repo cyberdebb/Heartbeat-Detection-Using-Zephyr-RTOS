@@ -1,0 +1,4 @@
+west:
+  command: /home/cyberdeb/zephyrproject/.venv/bin/west build -p always -b esp32_devkitc/esp32/procpu
+  topdir: /home/cyberdeb/zephyrproject
+  version: 1.5.0

@@ -1,0 +1,50 @@
+cmake:
+  application:
+    configuration-dir: '/home/cyberdeb/zephyrproject/zephyr/trabalho'
+    source-dir: '/home/cyberdeb/zephyrproject/zephyr/trabalho'
+  board:
+    name: 'esp32_devkitc'
+    path:
+     - '/home/cyberdeb/zephyrproject/zephyr/boards/espressif/esp32_devkitc'
+    qualifiers: 'esp32/procpu'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/cyberdeb/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/cyberdeb/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu.dts'
+     - '/home/cyberdeb/zephyrproject/zephyr/trabalho/app.overlay'
+    include-dirs:
+     - '/home/cyberdeb/zephyrproject/zephyr/include'
+     - '/home/cyberdeb/zephyrproject/zephyr/include/zephyr'
+     - '/home/cyberdeb/zephyrproject/zephyr/dts/common'
+     - '/home/cyberdeb/zephyrproject/zephyr/dts/vendor'
+     - '/home/cyberdeb/zephyrproject/zephyr/dts/rx'
+     - '/home/cyberdeb/zephyrproject/zephyr/dts/x86'
+     - '/home/cyberdeb/zephyrproject/zephyr/dts/xtensa'
+     - '/home/cyberdeb/zephyrproject/zephyr/dts/sparc'
+     - '/home/cyberdeb/zephyrproject/zephyr/dts/riscv'
+     - '/home/cyberdeb/zephyrproject/zephyr/dts/posix'
+     - '/home/cyberdeb/zephyrproject/zephyr/dts/arm64'
+     - '/home/cyberdeb/zephyrproject/zephyr/dts/arm'
+     - '/home/cyberdeb/zephyrproject/zephyr/dts/arc'
+     - '/home/cyberdeb/zephyrproject/zephyr/dts'
+    user-files:
+     - '/home/cyberdeb/zephyrproject/zephyr/trabalho/app.overlay'
+  kconfig:
+    files:
+     - '/home/cyberdeb/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu_defconfig'
+     - '/home/cyberdeb/zephyrproject/zephyr/trabalho/prj.conf'
+    user-files:
+     - '/home/cyberdeb/zephyrproject/zephyr/trabalho/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/cyberdeb/zephyr-sdk-0.17.4'
+  zephyr:
+    version: '4.3.99'
+    zephyr-base: '/home/cyberdeb/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/cyberdeb/zephyrproject/.venv/bin/west build -p always -b esp32_devkitc/esp32/procpu'
+  topdir: '/home/cyberdeb/zephyrproject'
+  version: '1.5.0'

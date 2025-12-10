@@ -1,0 +1,23 @@
+/ {
+    buttons {
+        compatible = "gpio-keys";
+        lo_p: lo_plus {
+            gpios = <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            label = "Lead Off Positive";
+        };
+        lo_n: lo_minus {
+            gpios = <&gpio0 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            label = "Lead Off Negative";
+        };
+    };
+};
+
+&i2c0 {
+    clock-frequency = <100000>;
+
+    ads1115_dev: ads1115@48 {
+        compatible = "ti,ads1115";
+        reg = <0x48>;
+        #io-channel-cells = <1>;
+    };
+};
